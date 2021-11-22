@@ -1,0 +1,76 @@
+.video {
+  position: relative;
+  height: 376px;
+  video[poster]{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+  }
+  &__player {
+    width: 100%;
+    max-width: 564px;
+  }
+  &__filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    &.active {
+      display: none;
+    }
+  }
+  &__btn {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+    color: $color-blue;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+  }
+}
+.chart {
+  display: flex;
+  margin-top: 56px;
+  &__wrapper {
+    margin-left: 60px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__item {
+    overflow-x: scroll;
+    margin-top: 10px;
+    & canvas {
+      height: 245px;
+    }
+    
+  }
+}
+.standarts {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  &__text {
+    max-width: 187px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__certif {
+    margin-left: 39px;
+    & + .standarts__certif {
+      margin-left: 9px;
+    }
+  }
+}

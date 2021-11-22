@@ -1,0 +1,164 @@
+@include font("Gilroy", "Gilroy-Black", "900", "normal");
+@include font("Gilroy", "Gilroy-Extrabold", "800", "normal");
+@include font("Gilroy", "Gilroy-Bold", "700", "normal");
+@include font("Gilroy", "Gilroy-Semibold", "600", "normal");
+@include font("Gilroy", "Gilroy-Medium", "500", "normal");
+@include font("Gilroy", "Gilroy-Regular", "400", "normal");
+@include font("Gilroy", "Gilroy-Light", "300", "normal");
+@include font("Gilroy", "Gilroy-UltraLight", "200", "normal");
+@include font("Gilroy", "Gilroy-Thin", "100", "normal");
+
+@font-face {
+  font-family: 'custom-icons';
+  src:  url('../fonts/custom-icons.eot?oveyty');
+  src:  url('../fonts/custom-icons.eot?oveyty#iefix') format('embedded-opentype'),
+    url('../fonts/custom-icons.ttf?oveyty') format('truetype'),
+    url('../fonts/custom-icons.woff?oveyty') format('woff'),
+    url('../fonts/custom-icons.svg?oveyty#custom-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'custom-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-plus .path1:before {
+  content: "\e900";
+  color: rgb(255, 255, 255);
+}
+.icon-plus .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(0, 167, 181);
+}
+.icon-plus .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(0, 167, 181);
+}
+.icon-arrow-right .path1:before {
+  content: "\e903";
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-right .path2:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-right .path3:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(0, 167, 181);
+}
+.icon-delete:before {
+  content: "\e906";
+  color: #dbdddd;
+}
+.icon-hh .path1:before {
+  content: "\e907";
+  color: rgb(214, 0, 28);
+}
+.icon-hh .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-left .path1:before {
+  content: "\e909";
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-left .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-left .path3:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(0, 167, 181);
+}
+.icon-pin:before {
+  content: "\e90c";
+}
+.icon-education:before {
+  content: "\e90d";
+}
+.icon-earth:before {
+  content: "\e90e";
+}
+.icon-magnetic-systems:before {
+  content: "\e90f";
+  font-size: 35px;
+}
+.icon-envelope:before {
+  content: "\e910";
+}
+.icon-car:before {
+  content: "\e911";
+  font-size: 30px;
+}
+.icon-electric-bus:before {
+  content: "\e912";
+  font-size: 37px;
+}
+.icon-train:before {
+  content: "\e913";
+  font-size: 31px;
+}
+.icon-play:before {
+  content: "\e914";
+}
+.icon-navigation:before {
+  content: "\e915";
+  font-size: 49px;
+}
+.icon-done:before {
+  content: "\e916";
+}
+.icon-bus:before {
+  content: "\e917";
+  font-size: 41px;
+}
+.icon-download:before {
+  content: "\e918";
+}
+.icon-car-2:before {
+  content: "\e919";
+  font-size: 32px;
+}
+.icon-chevron:before {
+  content: "\e91a";
+}
+.icon-refresh:before {
+  content: "\e91b";
+}
+.icon-combine:before {
+  content: "\e91c";
+  font-size: 39px;
+}
+.icon-leader:before {
+  content: "\e91d";
+}
+.icon-close:before {
+  content: "\e91e";
+}
+.icon-career:before {
+  content: "\e91f";
+}
+.icon-heck:before {
+  content: "\e920";
+}
+

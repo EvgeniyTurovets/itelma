@@ -1,0 +1,28 @@
+@mixin font($font_name, $file_name, $weight, $style) { // Для подключения шрифтов
+  @font-face {
+  font-family: $font_name;
+  font-display: swap;
+  src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+  font-weight: #{$weight};
+  font-style: #{$style};
+  }
+}
+// Bootstrap настройки
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1134px);
+// $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1134px);//1560px);
+// Подключение
+// @import 'node_modules/normalize.css/normalize';
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss';
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import 'node_modules/swiper/swiper-bundle.min';
+
+@import 'fonts';
+@import 'global';
+// Стили
+@import 'components/header';
+@import 'components/slider-main';
+@import 'components/categories';
+@import 'components/news';
+@import 'components/numbers';
+@import 'components/chart';

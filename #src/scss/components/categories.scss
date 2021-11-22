@@ -1,0 +1,117 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  &__item {
+    width: 25%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid $color-gray;
+    position: relative;
+    &:nth-child(4n) {
+      border-right: none;
+    }
+    &:nth-child(-n+4) {
+      border-bottom: 1px solid $color-gray;
+    }
+    &:hover {
+      background: rgba(0, 167, 181, 0.1);
+      .categories__title {
+        color: $color-blue;
+      }
+      .categories__list {
+        overflow: visible;
+        opacity: 1;
+        height: auto;
+        width: auto;
+        padding: 30px 44px 34px;
+      }
+    }
+  }
+
+  &__list {
+    overflow:hidden;  	
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    text-align: left;
+    background-color: #fff;
+    transition: 0.4s opacity, height 0.4s ease-out, width 0.4s ease-out;
+  }
+
+  &__content {
+    & + .categories__content {
+      margin-top: 16px;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 24px;
+    color: $color-main;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__icon {
+    color: $color-blue;
+  }
+
+  &__title {
+    max-width: 125px;
+    margin-left: 21px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 991px) {
+  .categories {
+
+		&__item {
+      flex-direction: column;
+      justify-content: left;
+      text-align: center;
+      padding: 24px 0;
+      height: 142px;
+      &:nth-child(-n+4) {
+        border-bottom: none;
+      }
+      &:nth-child(2n) {
+        border-right: none;
+      }
+      &:nth-child(-n+6) {
+        border-bottom: 1px solid $color-gray;
+      }
+      &:hover {
+        .categories__list {
+          padding: 10px 20px 14px;
+        }
+      }
+		}
+
+		&__icon {
+      margin-bottom: 8px;
+		}
+
+		&__title {
+      font-size: 15px;
+      margin-left: 0;
+		}
+  }
+}
+@media (max-width: 768px) {
+  .categories {
+    margin-top: 40px;
+		&__item {
+      width: 50%;
+		}
+  }
+}
