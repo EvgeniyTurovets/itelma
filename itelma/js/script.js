@@ -35,4 +35,5 @@ var ctx=document.getElementById('myChart');var myChart=new Chart(ctx,{type:'bar'
 }});function nFormatter(num,digits){var lookup=[{value:1,symbol:""},{value:1e3,symbol:" тыс."},{value:1e6,symbol:" млн."},{value:1e9,symbol:" млрд."}// { value: 1e12, symbol: "T" },
 // { value: 1e15, symbol: "P" },
 // { value: 1e18, symbol: "E" }
-];var rx=/\.0+$|(\.[0-9]*[1-9])0+$/;var item=lookup.slice().reverse().find(function(item){return num>=item.value;});return item?(num/item.value).toFixed(digits).replace(rx,"$1")+item.symbol:"0";};});
+];var rx=/\.0+$|(\.[0-9]*[1-9])0+$/;var item=lookup.slice().reverse().find(function(item){return num>=item.value;});return item?(num/item.value).toFixed(digits).replace(rx,"$1")+item.symbol:"0";};// p-category-slider
+var swiper=new Swiper("#p-category-slider",{pagination:{el:".swiper-pagination"}});});
