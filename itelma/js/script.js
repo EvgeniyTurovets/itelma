@@ -240,5 +240,4 @@ var ctx=document.getElementById('myChart');var myChart=new Chart(ctx,{type:'bar'
 // { value: 1e15, symbol: "P" },
 // { value: 1e18, symbol: "E" }
 ];var rx=/\.0+$|(\.[0-9]*[1-9])0+$/;var item=lookup.slice().reverse().find(function(item){return num>=item.value;});return item?(num/item.value).toFixed(digits).replace(rx,"$1")+item.symbol:"0";};;// p-category-slider
-var swiper=new Swiper("#p-category-slider",{pagination:{el:".swiper-pagination"}});;// p-category-slider
-var swiper=new Swiper("#p-category-slider",{pagination:{el:".swiper-pagination"}});});
+var p_category_swiper=new Swiper("#p-category-slider",{loop:true,spaceBetween:24,pagination:{el:".swiper-pagination2",clickable:true},navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'}});;});
