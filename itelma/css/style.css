@@ -1132,6 +1132,24 @@ body {
   margin: 0 auto;
 }
 
+.blue-btn {
+  padding: 11px 39px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #00A7B5;
+  border: 1px solid #00A7B5;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.blue-btn:hover {
+  color: #00A7B5;
+  background-color: #fff;
+}
+
 .fade {
   overflow: hidden;
   opacity: 0;
@@ -1983,6 +2001,123 @@ body {
   text-align: center;
 }
 
+.requirements__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 1px solid #E0E9EA;
+}
+
+.requirements__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.requirements__item {
+  margin-right: 10px;
+}
+
+.requirements__item + .requirements__item {
+  margin-left: 121px;
+}
+
+.requirements__name {
+  color: #707676;
+  line-height: 24px;
+}
+
+.requirements__value {
+  margin-top: 7px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.description {
+  padding: 19px 16px 101px;
+}
+
+.description__item {
+  margin-top: 45px;
+}
+
+.description__title {
+  font-size: 24px;
+  line-height: 32px;
+  color: #3D4247;
+  font-weight: 600;
+}
+
+.description__list {
+  margin-top: 27px;
+}
+
+.description__paragraph {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.description__paragraph + .description__paragraph {
+  margin-top: 16px;
+}
+
+.respond {
+  background-color: #F2F8F8;
+}
+
+.respond__title {
+  display: block;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 200;
+}
+
+.respond__form {
+  max-width: 622px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 16px 62px;
+}
+
+.respond__input:not(:-moz-placeholder-shown) + .respond__label {
+  color: #111;
+  transform: translate(0, -2.75rem);
+}
+
+.respond__input:not(:-ms-input-placeholder) + .respond__label {
+  color: #111;
+  -ms-transform: translate(0, -2.75rem);
+      transform: translate(0, -2.75rem);
+}
+
+.respond__input:focus + .respond__label,
+.respond__input:not(:placeholder-shown) + .respond__label {
+  color: #111;
+  -webkit-transform: translate(0, -2.75rem);
+      -ms-transform: translate(0, -2.75rem);
+          transform: translate(0, -2.75rem);
+}
+
+.respond__label {
+  display: block;
+  color: #999;
+  -webkit-transform: translate(0.25rem, -1.5rem);
+      -ms-transform: translate(0.25rem, -1.5rem);
+          transform: translate(0.25rem, -1.5rem);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
 @media (min-width: 768px) {
   .responsive-image--3by1 {
     padding-bottom: 37.25%;
@@ -2213,9 +2348,43 @@ body {
   .page-top-banner__text {
     font-size: 50px;
   }
+
+  .requirements__item + .requirements__item {
+    margin-left: 40px;
+  }
+
+  .description {
+    padding: 2px 16px 38px;
+  }
+
+  .description__item {
+    margin-top: 40px;
+  }
+
+  .description__title {
+    font-size: 18px;
+  }
+
+  .description__list {
+    margin-top: 16px;
+  }
+
+  .description__paragraph {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .description__paragraph + .description__paragraph {
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 768px) {
+  .blue-btn {
+    font-size: 14px;
+    padding: 7px 31px;
+  }
+
   .main-slider__title {
     font-size: 24px;
     line-height: 32px;
@@ -2309,6 +2478,46 @@ body {
 
   .footer__copyright {
     margin-top: 16px;
+  }
+
+  .requirements__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 35.95px 0 40px;
+    border-bottom: 1px solid #E0E9EA;
+  }
+
+  .requirements__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .requirements__item {
+    margin: 16px 0 0;
+  }
+
+  .requirements__item + .requirements__item {
+    margin-left: 0;
+  }
+
+  .requirements__item:last-child {
+    margin-bottom: 25px;
+  }
+
+  .requirements__name {
+    font-size: 14px;
+  }
+
+  .requirements__value {
+    font-size: 16px;
   }
 }
 

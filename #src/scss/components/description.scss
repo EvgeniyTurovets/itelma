@@ -1,0 +1,50 @@
+.description {
+  padding: 19px 16px 101px;
+  &__item {
+    margin-top: 45px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    color: #3D4247;
+    font-weight: 600;
+  }
+
+  &__list {
+    margin-top: 27px;
+  }
+
+  &__paragraph {
+    font-size: 18px;
+    line-height: 32px;
+    & + .description__paragraph {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .description {
+    padding: 2px 16px 38px;
+    &__item {
+      margin-top: 40px;
+    }
+  
+    &__title {
+      font-size: 18px;
+    }
+  
+    &__list {
+      margin-top: 16px;
+    }
+  
+    &__paragraph {
+      font-size: 16px;
+      line-height: 24px;
+      & + .description__paragraph {
+        margin-top: 16px;
+      }
+    }
+  }
+}

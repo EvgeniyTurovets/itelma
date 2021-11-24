@@ -2,6 +2,7 @@ $font-main: 'Gilroy', sans-serif;
 $color-main: #000;
 $color-blue: #00A7B5;
 $color-gray: #E0E9EA;
+$color-gray-text: #707676;
 
 html,
 body {
@@ -54,6 +55,25 @@ body {
 	max-width: 1248px;
 	padding: 0 16px;
 	margin: 0 auto;
+}
+
+.blue-btn {
+  padding: 11px 39px;
+  line-height: 24px;
+  color: #fff;
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+  &:hover {
+    color: $color-blue;
+    background-color: #fff;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 7px 31px;
+  }
 }
 
 .fade {

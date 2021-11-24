@@ -1,0 +1,40 @@
+.respond {
+  background-color: #F2F8F8;
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 200;
+  }
+  
+  &__form {
+    max-width: 622px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 64px 16px 62px;
+  }
+
+  &__input {
+    &:focus + .respond__label,
+    &:not(:placeholder-shown) + .respond__label  {
+      color: #111;
+      transform: translate(0, -2.75rem);
+    }
+  }
+
+  &__label {
+    display: block;
+    color: #999;
+    transform: translate(0.25rem, -1.5rem);
+    transition: all 0.2s ease-out;
+  }
+
+  &__name {
+  }
+
+  &__mail {
+  }
+
+  &__phone {
+  }
+}
