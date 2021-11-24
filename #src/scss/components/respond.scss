@@ -1,5 +1,6 @@
 .respond {
   background-color: #F2F8F8;
+  padding: 64px 16px 62px;
   &__title {
     display: block;
     text-align: center;
@@ -8,33 +9,157 @@
   }
   
   &__form {
-    max-width: 622px;
+    max-width: 591px;
     width: 100%;
-    margin: 0 auto;
-    padding: 64px 16px 62px;
+    margin: 48px auto 0;
+  }
+
+  &__wrapper {
+    margin-top: 32px;
+    display: flex;
+    align-items: baseline;
+    .respond__box {
+      width: 100%;
+      max-width: 287px;
+      &:last-child {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__box {
+    height: 64px;
   }
 
   &__input {
+    width: 100%;
+    height: 100%;
+    padding: 32px 35px 8px 24px;
+    line-height: 24px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
     &:focus + .respond__label,
     &:not(:placeholder-shown) + .respond__label  {
-      color: #111;
-      transform: translate(0, -2.75rem);
+      transform: translate(24px,-54px);
     }
   }
 
   &__label {
-    display: block;
-    color: #999;
-    transform: translate(0.25rem, -1.5rem);
+    display: inline-block;
+    line-height: 24px;
+    color: $color-gray-text;
+    transform: translate(24px,-42px);
     transition: all 0.2s ease-out;
+    cursor: text;
   }
 
-  &__name {
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
   }
 
-  &__mail {
+  &__information {
+    max-width: 247px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 24px;
   }
 
-  &__phone {
+  &__link {
+    color: $color-blue;
+  }
+}
+.correct {
+  position: relative;
+  .respond__input {
+    border: 1px solid #27AE60;
+  }
+  &::before {
+    content: '\e920';
+    font-family: 'custom-icons' !important;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-size: 9px;
+    color: #27AE60;
+  }
+}
+.incorrect {
+  position: relative;
+  margin-bottom: 24px;
+  .respond__input {
+    border: 1px solid #EB5757;
+  }
+  &::before {
+    content: '\e91e';
+    font-family: 'custom-icons' !important;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: #EB5757;
+  }
+  &::after {
+    content: 'Проверьте электронную почту';
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    color: #EB5757;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .respond {
+    padding: 36px 16px;
+    &__title {
+      font-size: 36px;
+    }
+    &__form {
+      margin-top: 28px;
+    }
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      .respond__box {
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+    &__box {
+      margin-top: 8px;
+      height: 48px;
+      max-width: none !important;
+    }
+    &__input {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 12px 16px 8px;
+      &:focus + .respond__label,
+      &:not(:placeholder-shown) + .respond__label  {
+        transform: translate(16px,-48px);
+      }
+    }
+    &__label {
+      font-size: 12px;
+      line-height: 16px;
+      transform: translate(16px,-36px);
+    }
+    &__inner {
+      flex-direction: column;
+      margin-top: 24px;
+    }
+    &__btn {
+    }
+    &__information {
+      margin: 12px 0 0;
+      text-align: center;
+    }
   }
 }

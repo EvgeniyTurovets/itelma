@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   @@include('components/chart.js');
   @@include('components/p-category-slider.js');
   @@include('components/respond.js');
+  @@include('components/career.js');
 
 });
 

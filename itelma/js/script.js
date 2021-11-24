@@ -2103,8 +2103,34 @@ var burgerBtn=document.querySelector('.burger');var navMenu=document.querySelect
 var swiper=new Swiper(".main-slider",{pagination:{el:".swiper-pagination"},autoplay:{delay:5000,disableOnInteraction:false},loop:true});;// Numbers
 var counter=document.querySelectorAll('.numbers__number');function numberWithCommas(x){var suffix=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'';return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g," ")+suffix;}function animateValue(obj,start,end,duration,suffix){var startTimestamp=null;var step=function step(timestamp){if(!startTimestamp)startTimestamp=timestamp;var progress=Math.min((timestamp-startTimestamp)/duration,1);obj.innerHTML=numberWithCommas(Math.floor(progress*(end-start)+start),suffix);if(progress<1){window.requestAnimationFrame(step);}};window.requestAnimationFrame(step);}function elementInViewport(el){var top=el.offsetTop;var left=el.offsetLeft;var width=el.offsetWidth;var height=el.offsetHeight;while(el.offsetParent){el=el.offsetParent;top+=el.offsetTop;left+=el.offsetLeft;}return top<window.pageYOffset+window.innerHeight&&left<window.pageXOffset+window.innerWidth&&top+height>window.pageYOffset&&left+width>window.pageXOffset;}window.addEventListener('scroll',function(){counter.forEach(function(el){var isEnded=el.dataset.ended;var start=parseFloat(el.dataset.start);var end=parseFloat(el.dataset.end);var duration=parseFloat(el.dataset.duration);var delay=el.dataset.delay?parseFloat(el.dataset.delay):0;var suffix=el.dataset.suffix?el.dataset.suffix:'';if(!isEnded&&elementInViewport(el)){el.setAttribute('data-ended',true);setTimeout(function(){animateValue(el,start,end,duration,suffix);},delay);}});},false);// Video
 var videoPlayer=document.querySelectorAll('.js-video');videoPlayer.forEach(function(element){var video=element.querySelector('video');var videoFilter=element.querySelector('.video__filter');video.volume=0.2;element.addEventListener('click',function(){if(video.paused){videoFilter.classList.add('active');video.play();}else{video.pause();videoFilter.classList.remove('active');}});});;//Chart
-var ctx=document.getElementById('myChart');var myChart=new Chart(ctx,{type:'bar',data:{labels:['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019'],datasets:[{label:'Продано',data:[650000,900000,900000,1000000,1000000,1200000,1500000,1600000,1650000,1800000],backgroundColor:'#00A7B5'}]},options:{scales:{y:{beginAtZero:true,ticks:{callback:function callback(val,index){var result=nFormatter(val,1);var tmp=result.split(' ');tmp[0]=tmp[0].replace('.',',');return tmp.join(' ');},stepSize:400000,padding:18},grid:{drawBorder:false}},x:{grid:{display:false,drawBorder:false}}},plugins:{legend:{display:false}}}});function nFormatter(num,digits){var lookup=[{value:1,symbol:""},{value:1e3,symbol:" тыс."},{value:1e6,symbol:" млн."},{value:1e9,symbol:" млрд."}// { value: 1e12, symbol: "T" },
+var ctx=document.getElementById('myChart');if(ctx){var nFormatter=function nFormatter(num,digits){var lookup=[{value:1,symbol:""},{value:1e3,symbol:" тыс."},{value:1e6,symbol:" млн."},{value:1e9,symbol:" млрд."}// { value: 1e12, symbol: "T" },
 // { value: 1e15, symbol: "P" },
 // { value: 1e18, symbol: "E" }
-];var rx=/\.0+$|(\.[0-9]*[1-9])0+$/;var item=lookup.slice().reverse().find(function(item){return num>=item.value;});return item?(num/item.value).toFixed(digits).replace(rx,"$1")+item.symbol:"0";};;// p-category-slider
-var swiper=new Swiper("#p-category-slider",{pagination:{el:".swiper-pagination"}});;$(function(){$('input').each(function(){$(this).val($(this).attr('holder'));});$('input').focus(function(){if($(this).attr('holder')==$(this).val()){$(this).val('');}});$('input').focusout(function(){if($.trim($(this).val())==''){var holder=$(this).attr('holder');$(this).val(holder);}});});;});
+];var rx=/\.0+$|(\.[0-9]*[1-9])0+$/;var item=lookup.slice().reverse().find(function(item){return num>=item.value;});return item?(num/item.value).toFixed(digits).replace(rx,"$1")+item.symbol:"0";};var myChart=new Chart(ctx,{type:'bar',data:{labels:['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019'],datasets:[{label:'Продано',data:[650000,900000,900000,1000000,1000000,1200000,1500000,1600000,1650000,1800000],backgroundColor:'#00A7B5'}]},options:{scales:{y:{beginAtZero:true,ticks:{callback:function callback(val,index){var result=nFormatter(val,1);var tmp=result.split(' ');tmp[0]=tmp[0].replace('.',',');return tmp.join(' ');},stepSize:400000,padding:18},grid:{drawBorder:false}},x:{grid:{display:false,drawBorder:false}}},plugins:{legend:{display:false}}}});;};// p-category-slider
+if(document.getElementById("p-category-slider")){var p_category_swiper=new Swiper("#p-category-slider",{spaceBetween:24,pagination:{el:".swiper-pagination2",clickable:true},navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'}});p_category_swiper.on('slideChange',function(){var activeIndex=p_category_swiper.activeIndex;point.forEach(function(el2){el2.classList.remove('active');});point[activeIndex].classList.add('active');});var point=document.querySelectorAll('.point');point.forEach(function(el,index){el.setAttribute('data-index',index);el.addEventListener('click',function(){if(!el.classList.contains('active')){var index=el.getAttribute('data-index');p_category_swiper.slideTo(index);}});});};// respond
+// Dropzone.options.myDropzone = {
+//   url: 'upload.php',
+//   autoProcessQueue: false,
+//   uploadMultiple: true,
+//   parallelUploads: 5,
+//   maxFiles: 5,
+//   maxFilesize: 1,
+//   acceptedFiles: 'image/*',
+//   addRemoveLinks: true,
+//   init: function () {
+//     dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
+//     // for Dropzone to process the queue (instead of default form behavior):
+//     document.getElementById("submit-all").addEventListener("click", function (e) {
+//       // Make sure that the form isn't actually being sent.
+//       e.preventDefault();
+//       e.stopPropagation();
+//       dzClosure.processQueue();
+//     });
+//     //send all the form data along with the files:
+//     this.on("sendingmultiple", function (data, xhr, formData) {
+//       formData.append("firstname", jQuery("#firstname").val());
+//       formData.append("lastname", jQuery("#lastname").val());
+//     });
+//   }
+// };
+;});

@@ -8,6 +8,7 @@
   }
 };
 @import 'node_modules/swiper/swiper-bundle.min';
+@import 'node_modules/dropzone/dist/dropzone';
 
 @import 'fonts';
 @import 'global';
@@ -25,6 +26,7 @@
 @import 'components/products-category';
 
 // career
+@import 'components/company';
 @import 'components/requirements';
 @import 'components/description';
 @import 'components/respond';

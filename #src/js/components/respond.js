@@ -1,17 +1,28 @@
-$(function () {
-  $('input').each(function () {
-    $(this).val($(this).attr('holder'));
-  });
+// respond
+// Dropzone.options.myDropzone = {
+//   url: 'upload.php',
+//   autoProcessQueue: false,
+//   uploadMultiple: true,
+//   parallelUploads: 5,
+//   maxFiles: 5,
+//   maxFilesize: 1,
+//   acceptedFiles: 'image/*',
+//   addRemoveLinks: true,
+//   init: function () {
+//     dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
 
-  $('input').focus(function () {
-    if ($(this).attr('holder') == $(this).val()) {
-      $(this).val('');
-    }
-  });
-  $('input').focusout(function () {
-    if ($.trim($(this).val()) == '') {
-      var holder = $(this).attr('holder');
-      $(this).val(holder);
-    }
-  });
-});
+//     // for Dropzone to process the queue (instead of default form behavior):
+//     document.getElementById("submit-all").addEventListener("click", function (e) {
+//       // Make sure that the form isn't actually being sent.
+//       e.preventDefault();
+//       e.stopPropagation();
+//       dzClosure.processQueue();
+//     });
+
+//     //send all the form data along with the files:
+//     this.on("sendingmultiple", function (data, xhr, formData) {
+//       formData.append("firstname", jQuery("#firstname").val());
+//       formData.append("lastname", jQuery("#lastname").val());
+//     });
+//   }
+// }
