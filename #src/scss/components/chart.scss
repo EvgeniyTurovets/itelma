@@ -36,7 +36,7 @@
 }
 .chart {
   display: flex;
-  margin-top: 56px;
+  margin: 56px auto 104px;
   &__wrapper {
     margin-left: 60px;
   }
@@ -48,7 +48,6 @@
   }
 
   &__item {
-    overflow-x: scroll;
     margin-top: 10px;
     & canvas {
       height: 245px;
@@ -71,6 +70,46 @@
     margin-left: 39px;
     & + .standarts__certif {
       margin-left: 9px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .video {
+    width: 100%;
+    height: auto;
+    display: flex;
+    &__player {
+      min-width: 100%;
+    }
+  }
+  .chart {
+    flex-direction: column;
+    margin-bottom: 40px;
+    &__wrapper {
+      margin: 15px 0 0;
+    }
+    &__title {
+      font-size: 16px;
+    }
+    &__item {
+      & canvas {
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .standarts {
+    margin-top: 15px;
+    &__text {
+      font-size: 16px;
+    }
+    &__certif {
+      margin-left: 16px;
+      width: 48px;
+      height: 48px;
+      & + .standarts__certif {
+        margin-left: 9px;
+      }
     }
   }
 }

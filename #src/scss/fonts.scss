@@ -35,6 +35,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-car-2:before {
+  content: "\e914";
+  font-size: 32px;
+}
+.icon-play:before {
+  content: "\e919";
+}
 .icon-plus .path1:before {
   content: "\e900";
   color: rgb(255, 255, 255);
@@ -118,9 +126,6 @@
   content: "\e913";
   font-size: 31px;
 }
-.icon-play:before {
-  content: "\e914";
-}
 .icon-navigation:before {
   content: "\e915";
   font-size: 49px;
@@ -134,10 +139,6 @@
 }
 .icon-download:before {
   content: "\e918";
-}
-.icon-car-2:before {
-  content: "\e919";
-  font-size: 32px;
 }
 .icon-chevron:before {
   content: "\e91a";
@@ -161,4 +162,3 @@
 .icon-heck:before {
   content: "\e920";
 }
-

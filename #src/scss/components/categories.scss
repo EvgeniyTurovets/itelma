@@ -17,7 +17,8 @@
       border-bottom: 1px solid $color-gray;
     }
     &:hover {
-      background: rgba(0, 167, 181, 0.1);
+      cursor: pointer;
+      background-color: #F7FCFC;
       .categories__title {
         color: $color-blue;
       }
@@ -112,6 +113,27 @@
     margin-top: 40px;
 		&__item {
       width: 50%;
+      &:nth-child(2n) {
+        .categories__list {
+          left: auto;
+          right: 0;
+        }
+      }
+		}
+    &__list {
+      background-color: #F7FCFC;
+      
+    }
+  }
+}
+@media (max-width: 609px) {
+  .categories {
+		&__item {
+      &:hover {
+        .categories__list {
+          width: 288px;
+        }
+      }
 		}
   }
 }

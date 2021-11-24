@@ -6,9 +6,9 @@ let fs = require('fs'); // Для автоподключения шрифтов
 let path = {
   // Пути к исходникам
   src: {
-    html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'], // Путь в корень папки иходников, исключение файлы с _
+    html: [source_folder + '/*.html', '!' + source_folder + '/components/*.html'], // Путь в корень папки иходников, исключение файлы с _
     css: [source_folder + '/scss/style.scss', '!' + source_folder + '/scss/components/**.scss'], // Путь к исходнику scss
-    js: source_folder + '/js/script.js', // Путь к исходнику js
+    js: [source_folder + '/js/script.js', '!' + source_folder + '/js/components/**.js'], // Путь к исходнику js
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}', // Путь к файлам в папке img и всех вложенных папок в нее с конкретным расширением
     fonts: [source_folder + '/fonts/*.ttf', '!' + source_folder + '/fonts/icons'], // Путь к файлам в папке fonts с расширением ttf
     fontsIgnore: source_folder + '/fonts/icons/**.*', // Игнор шрифтов для перевода в woff
