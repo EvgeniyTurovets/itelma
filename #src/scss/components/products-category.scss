@@ -1,0 +1,116 @@
+.page-top-banner{
+  height: 248px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 2200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-position: center;
+  position: relative;
+}
+.page-top-banner:after{
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 0;
+}
+.page-top-banner__text{
+  font-weight: 250;
+  font-size: 64px;
+  line-height:112%;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Gilroy';
+  max-width: 936px;
+  position: relative;
+  z-index: 1;
+}
+
+@media(max-width: 991px){
+  .page-top-banner__text{
+      font-size: 50px;
+  }
+}
+
+@media(max-width: 767px){
+  .page-top-banner__text{
+      font-size: 24px;
+      max-width: 288px;
+  }
+}
+.p-category{
+  padding-top: 56px;
+  padding-bottom: 126px;
+}
+.p-category__wrap{
+  display: flex;
+  align-items: center;
+}
+.p-category__left{
+  flex: 1;
+  height: 463px;
+  margin-right: 89px;
+}
+.p-category__left img{
+  width: 100%;
+}
+
+.p-category__right{
+  width: 384px;
+}
+.p-category-slider{
+  overflow: hidden;   
+  position: relative;
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+.p-category-slider__img{
+  background-position: center;
+  background-color:  #D8DFDF;
+  height: 256px;
+  margin-bottom: 34px;
+  background-repeat: no-repeat;
+}
+.p-category-slider__content{
+  padding: 0 40px;
+  margin-bottom: 44px;
+}
+.p-category-slider__title{
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  color: #00A7B5;
+  margin-bottom: 16px;
+}
+.p-category-slider__text{
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: #707676;
+  margin-bottom: 30px;
+}
+.p-category-slider__link{
+  background: #00A7B5;
+  border-radius: 100px;
+  padding: 12px 12px;
+  display: block;
+  font-family: 'Gilroy';
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-align: center;
+}
