@@ -1,0 +1,29 @@
+.press-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.press-info__logo{
+    width: 178px;
+    margin-right: 71px;
+}
+.press-info__logo__item{
+    margin-top: 31px;
+    a {
+        font-size: 14px;
+        line-height: 24px;
+        color: #00A7B5;
+    }
+
+}
+.press-info__logo__item__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 93px;
+    border: 1px solid #E0E9EA;
+    border-radius: 10px;
+    img{
+        max-width: 100%;
+    }
+}
