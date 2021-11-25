@@ -269,11 +269,66 @@
         <div class="requirements__value">Полная занятость, полный день</div>
       </div>
     </div>
-    <button type="button" class="blue-btn">
+    <button type="button" class="blue-btn" data-micromodal-trigger="respond-modal">
       Откликнутся
     </button>
   </div>
 </section>
+<div id="respond-modal" aria-hidden="true">
+  <div tabindex="-1" data-micromodal-close>
+    <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <section class="respond">
+  <span class="respond__title">Откликнуться</span>
+
+  <form action="" class="respond__form" enctype="multipart/form-data">
+    <div class="respond__box respond__name">
+      <input type="text" id="name" class="respond__input" placeholder=" ">
+      <label for="name" class="respond__label">Фамилия и имя</label>
+    </div>
+
+    <div class="respond__wrapper">
+      <div class="respond__box respond__mail incorrect">
+        <input type="email" id="email" class="respond__input" placeholder=" ">
+        <label for="email" class="respond__label">Почта</label>
+      </div>
+
+      <div class="respond__box respond__phone correct">
+        <input type="tel" id="phone" class="respond__input" placeholder=" ">
+        <label for="phone" class="respond__label">Телефон</label>
+      </div>
+    </div>
+
+    <!-- <div class="dropzone" id="">
+      <input type="file" class="dropzone__input" id="dropzone__input" multiple>
+      <label for="dropzone__input" class="dropzone__label"><span class="dropzone__span">Выберите резюме/портфолио</span>или перетащите их сюда</label>
+    </div> -->
+
+    <div class="dropzone__wrapper">
+      <div class="dropzone">
+        <label class="dropzone__label">
+          <input type="file" class="dropzone__input" multiple>
+          <span class="dropzone__span">Выберите резюме/портфолио</span>или перетащите их сюда
+        </label>
+      </div>
+
+      <ul class="dropzone-output">
+      </ul>
+    </div>
+
+    <div class="respond__inner">
+      <button type="submit" class="blue-btn respond__btn">
+        Отправить
+      </button>
+      <p class="respond__information">
+        Нажимая на кнопку, вы даете согласие на обработку своих
+        <a href="#" class="respond__link"> персональных данных</a>.
+      </p>
+    </div>
+  </form>
+</section>
+    </div>
+  </div>
+</div>
 <section class="description container">
   <div class="description__item">
     <span class="description__title">Обязанности</span>
@@ -337,8 +392,21 @@
       </div>
     </div>
 
-    <div class="dropzone" id="myDropzone">
-      перетащить
+    <!-- <div class="dropzone" id="">
+      <input type="file" class="dropzone__input" id="dropzone__input" multiple>
+      <label for="dropzone__input" class="dropzone__label"><span class="dropzone__span">Выберите резюме/портфолио</span>или перетащите их сюда</label>
+    </div> -->
+
+    <div class="dropzone__wrapper">
+      <div class="dropzone">
+        <label class="dropzone__label">
+          <input type="file" class="dropzone__input" multiple>
+          <span class="dropzone__span">Выберите резюме/портфолио</span>или перетащите их сюда
+        </label>
+      </div>
+
+      <ul class="dropzone-output">
+      </ul>
     </div>
 
     <div class="respond__inner">
@@ -352,6 +420,7 @@
     </div>
   </form>
 </section>
+
 </div>
 
 <footer class="footer">

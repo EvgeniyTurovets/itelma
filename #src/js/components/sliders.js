@@ -9,3 +9,5 @@ var swiper = new Swiper(".main-slider", {
   },
   loop: true,
 });
+
+// career slider
