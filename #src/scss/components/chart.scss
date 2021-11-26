@@ -1,14 +1,11 @@
 .video {
   position: relative;
   height: 376px;
-  video[poster]{
-    height:100%;
-    width:100%;
-    object-fit: cover;
-  }
-  &__player {
+  max-width: 564px;
+  width: 100%;
+  .js-video-gallary {
+    height: 100%;
     width: 100%;
-    max-width: 564px;
   }
   &__filter {
     position: absolute;
@@ -85,12 +82,8 @@
 }
 @media (max-width: 991px) {
   .video {
-    width: 100%;
-    height: auto;
-    display: flex;
-    &__player {
-      min-width: 100%;
-    }
+    max-width: 100%;
+    // display: flex;
   }
   .chart {
     flex-direction: column;

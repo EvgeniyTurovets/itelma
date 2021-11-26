@@ -18,3 +18,15 @@ lightGallery(document.getElementById('lightgallery'), {
     speed: 500,
     download: false,
 });
+
+var js_video_gallary = document.querySelectorAll('.js-video-gallary') 
+if(js_video_gallary){
+    js_video_gallary.forEach(function(el){
+        lightGallery(el, {
+            selector: 'this',
+            download: false,
+            counter: false,
+            plugins: [lgVideo],
+        });
+    })
+}

@@ -1,0 +1,43 @@
+.submenu {
+  background-color: #F5F5F5;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+  }
+
+  &__item {
+    margin: 0 19px;
+  }
+
+  &__link {
+    line-height: 24px;
+    color: $color-gray-text;
+    &.active {
+      color: $color-blue;
+    }
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .submenu {
+    &__list {
+      white-space: nowrap;
+      width: 100%;
+      overflow-x: scroll;
+    }
+  
+    &__item {
+      & + .submenu__item {
+        margin-left: 24px;
+      }
+    }
+  
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
