@@ -646,6 +646,6 @@ if(js_video_gallary){
         });
     })
 };
-
+  ;
 });
 
