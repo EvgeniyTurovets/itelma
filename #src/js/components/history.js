@@ -11,6 +11,29 @@ if (document.getElementById("history-slider")) {
       enabled: true,
     },
     grabCursor: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 0.24,
+      },
+      400: {
+        slidesPerView: 0.30,
+      },
+      500: {
+        slidesPerView: 0.38,
+      },
+      700: {
+        slidesPerView: 0.52,
+      },
+      900: {
+        slidesPerView: 0.68,
+      },
+      1100: {
+        slidesPerView: 0.80,
+      },
+      1300: {
+        slidesPerView: 1,
+      }
+    }
   });
 
   history_swiper.on('slideChange', function () {
