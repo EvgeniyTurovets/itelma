@@ -61,3 +61,23 @@ if (ctx) {
     return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
   };
 }
+
+
+
+var xAxisLabelMinWidth = 15; // Replace this with whatever value you like
+// var myChart = new Chart(document.getElementById('chart').getContext('2d'), {
+//     type: 'line',
+//     data: {},
+//     options: {
+//         responsive: true,
+//         maintainAspectRatio: false
+//     }
+// });
+
+function fitChart() {
+  var chartCanvas = document.querySelectorAll('.chart__canvas');
+  var maxWidth = chartCanvas.parentElement.parentElement.clientWidth;
+  var chartCanvas = Math.max(mayChart.data.labels.length * xAxisLabelMinWidth, maxWidth);
+
+  chartCanvas.parentElement.style.width = width + 'px';
+}

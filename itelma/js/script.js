@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
   // Menu btn
@@ -10,7 +9,19 @@ burgerBtn.onclick = function () {
   navMenu.classList.toggle('active');
 };
 
+var header = $('.header__wrapper'),
+  scrollPrev = 0;
 
+$(window).scroll(function () {
+  var scrolled = $(window).scrollTop();
+
+  if (scrolled > 100 && scrolled > scrollPrev) {
+    header.addClass('out');
+  } else {
+    header.removeClass('out');
+  }
+  scrollPrev = scrolled;
+});
 
 // function startResize(e) {
 //   let windowWidth = window.innerWidth;
@@ -423,7 +434,26 @@ if (ctx) {
     return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
   };
 }
-;
+
+
+
+var xAxisLabelMinWidth = 15; // Replace this with whatever value you like
+// var myChart = new Chart(document.getElementById('chart').getContext('2d'), {
+//     type: 'line',
+//     data: {},
+//     options: {
+//         responsive: true,
+//         maintainAspectRatio: false
+//     }
+// });
+
+function fitChart() {
+  var chartCanvas = document.querySelectorAll('.chart__canvas');
+  var maxWidth = chartCanvas.parentElement.parentElement.clientWidth;
+  var chartCanvas = Math.max(mayChart.data.labels.length * xAxisLabelMinWidth, maxWidth);
+
+  chartCanvas.parentElement.style.width = width + 'px';
+};
   // p-category-slider
 
 if(document.getElementById("p-category-slider")){
@@ -546,7 +576,9 @@ if(document.getElementById("p-category-slider")){
     for (b = (new ClipboardEvent("")).clipboardData || new DataTransfer; c--;) b.items.add(a[c])
     return b.files
   }
-})();
+})()
+
+MicroModal.init();;
   ;
   if (document.getElementById("career-slider")) {
 
@@ -600,9 +632,7 @@ if(sub_news_form){
 lightGallery(document.getElementById('lightgallery'), {
     speed: 500,
     download: false,
-});
-
-;
+});;
 
 });
 

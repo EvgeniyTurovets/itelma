@@ -8,7 +8,8 @@ let path = {
   src: {
     html: [source_folder + '/*.html', '!' + source_folder + '/components/*.html'], // Путь в корень папки иходников, исключение файлы с _
     css: [source_folder + '/scss/style.scss', '!' + source_folder + '/scss/components/**.scss'], // Путь к исходнику scss
-    js: [source_folder + '/js/*.js', '!' + source_folder + '/js/components/**.js'], // Путь к исходнику js
+    jsLib: [source_folder + '/js/vendor.js'],
+    js: [source_folder + '/js/*.js', '!' + source_folder + '/js/components/**.js', '!' + source_folder + '/js/vendor.js'], // Путь к исходнику js
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}', // Путь к файлам в папке img и всех вложенных папок в нее с конкретным расширением
     fonts: [source_folder + '/fonts/*.ttf', '!' + source_folder + '/fonts/icons'], // Путь к файлам в папке fonts с расширением ttf
     fontsIgnore: source_folder + '/fonts/icons/**.*', // Игнор шрифтов для перевода в woff
@@ -96,13 +97,27 @@ function js() {
     // .pipe( // Сжимает js
     //   uglify()
     // )
+    // .pipe( // Добавляет min
+    //   rename({
+    //     extname: '.min.js'
+    //   })
+    // )
+    .pipe(dest(path.build.js)) // Путь вывода js
+    .pipe(browsersync.stream()) // Перезагрузка
+}
+function jsLib() {
+  return src(path.src.jsLib)
+    .pipe(fileinclude())
+    .pipe( // Сжимает js
+      uglify()
+    )
     .pipe( // Добавляет min
       rename({
         extname: '.min.js'
       })
     )
-    .pipe(dest(path.build.js)) // Путь вывода js
-    .pipe(browsersync.stream()) // Перезагрузка
+    .pipe(dest(path.build.js))
+    .pipe(browsersync.stream())
 }
 
 // Конвертирует img
@@ -173,6 +188,7 @@ function watchFiles() {
   gulp.watch([path.watch.html], html); // Путь к html файлам и запуск функции html
   gulp.watch([path.watch.css], css); // Путь к css файлам и запуск функции css
   gulp.watch([path.watch.js], js); // Путь к js файлам и запуск функции js
+  // gulp.watch([path.watch.jsLib], jsLib); // Путь к js файлам и запуск функции js
   //  gulp.watch([path.watch.img], images); // Путь к img и запуск функции js
 }
 
@@ -193,7 +209,7 @@ function browserSync() {
 }
 
 // Прописывать функции которые должны выполниться
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, fontsIgnore, video));
+let build = gulp.series(clean, gulp.parallel(js, jsLib, css, html, images, fonts, fontsIgnore, video));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 // Чтобы галп понимал переменные
@@ -203,6 +219,7 @@ exports.fonts = fonts;
 exports.fontsIgnore = fontsIgnore;
 exports.images = images;
 exports.js = js;
+exports.jsLib = jsLib;
 exports.css = css;
 exports.html = html;
 exports.build = build;

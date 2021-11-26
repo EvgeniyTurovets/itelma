@@ -7,7 +7,19 @@ burgerBtn.onclick = function () {
   navMenu.classList.toggle('active');
 };
 
+var header = $('.header__wrapper'),
+  scrollPrev = 0;
 
+$(window).scroll(function () {
+  var scrolled = $(window).scrollTop();
+
+  if (scrolled > 100 && scrolled > scrollPrev) {
+    header.addClass('out');
+  } else {
+    header.removeClass('out');
+  }
+  scrollPrev = scrolled;
+});
 
 // function startResize(e) {
 //   let windowWidth = window.innerWidth;

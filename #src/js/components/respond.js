@@ -80,3 +80,5 @@
     return b.files
   }
 })()
+
+MicroModal.init();
