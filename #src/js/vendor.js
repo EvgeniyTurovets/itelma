@@ -5,3 +5,4 @@
 @@include('../../node_modules/lightgallery/lightgallery.min.js');
 @@include('../../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js');
 @@include('../../node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js');
+@@include('../../node_modules/lightgallery/plugins/video/lg-video.min.js');
