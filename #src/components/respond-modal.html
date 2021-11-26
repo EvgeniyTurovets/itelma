@@ -1,7 +1,17 @@
-<div id="respond-modal" aria-hidden="true">
+<div id="respond-modal" class="modal" aria-hidden="true">
   <div tabindex="-1" data-micromodal-close>
-    <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-      @@include('respond.html')
+    @@include('respond.html')
+    <span class="close-modal icon-close close-btn" data-micromodal-close></span>
+  </div>
+</div>
+
+<div id="respond-modal-success" class="modal" aria-hidden="true">
+  <div tabindex="-1" data-micromodal-close>
+    <div class="success">
+      <span class="success__icon icon-done"></span>
+      <div class="success__title">Резюме отправлено!</div>
+      <div class="success__subtitle">Мы свяжется с вами в течении дня</div>
+      <button class="success__close blue-btn close-btn" type="button" data-micromodal-close>Хорошо</button>
     </div>
   </div>
 </div>

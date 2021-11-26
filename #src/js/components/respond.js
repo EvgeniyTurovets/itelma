@@ -81,4 +81,7 @@
   }
 })()
 
-MicroModal.init();
+MicroModal.init({
+  openClass: 'is-open',
+});
+
