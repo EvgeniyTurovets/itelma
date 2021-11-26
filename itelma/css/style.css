@@ -5227,6 +5227,13 @@ body {
   line-height: 24px;
 }
 
+.news-video__wrap .video__btn {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .sub-news {
   margin-top: 64px;
   background-color: #00A7B5;

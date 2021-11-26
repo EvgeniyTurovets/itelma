@@ -340,7 +340,14 @@
         line-height: 24px;
     }
 }
-
+.news-video__wrap {
+    .video__btn{
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
 @media(max-width: 991px){
     .news-video__wrap{
         flex-direction: column;
