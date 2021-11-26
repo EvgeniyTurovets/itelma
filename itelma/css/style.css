@@ -5715,6 +5715,123 @@ body {
   line-height: 24px;
 }
 
+.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 39px 0 70px;
+}
+
+.date__wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #F2F8F8;
+  border-radius: 100px;
+}
+
+.date__item {
+  padding: 8px 22px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  color: #00A7B5;
+  white-space: nowrap;
+  border: 1px solid #F2F8F8;
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.date__item:hover {
+  border: 1px solid #00A7B5;
+}
+
+.date__item.active {
+  color: #fff;
+  background-color: #00A7B5;
+  border: 1px solid #00A7B5;
+  cursor: default;
+}
+
+#history-slider {
+  padding-bottom: 51px;
+}
+
+.history {
+  margin-bottom: 109px;
+}
+
+.history__wrapper {
+  min-width: 0;
+}
+
+.history .test {
+  width: 100%;
+}
+
+.history__slide {
+  width: auto;
+}
+
+.history__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 119px 0 16px;
+  height: 140px;
+}
+
+.history__row--second {
+  padding: 0 16px 0 119px;
+}
+
+.history__row--second .history__item {
+  padding-top: 45px !important;
+}
+
+.history__item {
+  padding: 0 33px 32px;
+  min-width: 330px;
+  max-width: 354px;
+  border-left: 1px solid #E0E9EA;
+}
+
+.history__year {
+  color: #3D4247;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.history__text {
+  margin-top: 4px;
+  color: #1E3230;
+  line-height: 24px;
+}
+
+.history hr {
+  width: 100%;
+  border-top: 1px solid #E0E9EA;
+}
+
+.history .swiper-scrollbar {
+  background-color: #F2F8F8;
+  cursor: pointer;
+}
+
+.history .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: #00A7B5;
+}
+
 .contact {
   padding-top: 55px;
   position: relative;
@@ -6917,6 +7034,23 @@ body {
     max-width: 100%;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .date {
+    margin: 43px 0 20px;
+  }
+
+  .date__item {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .history__year {
+    font-size: 18px;
+  }
+
+  .history__text {
+    font-size: 14px;
   }
 }
 

@@ -13,5 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   @@include('components/vacancy.js');
   @@include('components/press.js');
   @@include('components/contact.js');
+  @@include('components/history.js');
 });
 
