@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   @@include('components/jquery.nice-select.min.js');
   @@include('components/vacancy.js');
   @@include('components/press.js');
-
+  @@include('components/contact.js');
 });
 
