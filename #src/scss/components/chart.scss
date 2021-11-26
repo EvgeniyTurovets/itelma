@@ -40,7 +40,10 @@
   &__wrapper {
     margin-left: 60px;
   }
-
+  &__inner {
+    position: relative;
+    overflow: hidden;
+  }
   &__title {
     font-size: 18px;
     font-weight: 300;
@@ -49,10 +52,16 @@
 
   &__item {
     margin-top: 10px;
+    position: relative;
+    height: 245px;
+    min-width: 471px;
     & canvas {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       height: 245px;
     }
-    
   }
 }
 .standarts {
@@ -73,7 +82,7 @@
     }
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .video {
     width: 100%;
     height: auto;
@@ -91,13 +100,10 @@
     &__title {
       font-size: 16px;
     }
-    &__item {
-      & canvas {
-      }
-    }
   }
 }
 @media (max-width: 991px) {
+
   .standarts {
     margin-top: 15px;
     &__text {
@@ -110,6 +116,11 @@
       & + .standarts__certif {
         margin-left: 9px;
       }
+    }
+  }
+  .chart__inner {
+    &:hover{
+      overflow: scroll;
     }
   }
 }
